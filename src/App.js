@@ -1,6 +1,5 @@
-import React from 'react';
-import FromSend from './RegisterFrom';
-import './FormStyles.css';
+import React from "react";
+import FromSend from "./RegisterFrom.tsx";
 
 function App() {
   return (

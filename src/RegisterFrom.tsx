@@ -57,16 +57,11 @@ function FromSend(){
             console.log('Password:', password);
             alert('Registration Successful');
         }
-
-    console.log('First name:',firstName);
-    console.log('Last Name:',lastName);
-    console.log('Email:',email);
-    console.log('Password:',password);
 };
 
 return (
-    <dev className='form-container'>
-        <from onSubmit={Submit}>
+    <div className='form-container'>
+        <form onSubmit={Submit}>
         <div className="form-group">
             <label>First Name:</label>
             <input type="text" value={firstName} onChange={sendFirstName}></input>
@@ -92,8 +87,8 @@ return (
         <div className="form-group">
         <button onClick={Submit}>Register</button>
         </div>
-        </from>
-    </dev>
+        </form>
+    </div>
 );
 };
 
