@@ -1,11 +1,23 @@
 import React from "react";
-import FromSend from "./RegisterFrom.tsx";
+import MainIndex from "./Mains/Main";
+import Risk from "./Mains/Risks";
+import MainIndexT from "./Mains/MainT";
+import MainIndexN from "./Mains/MainTR";
+import MainIndexF from "./Mains/MainF";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <div className="h2">Registration Form</div>
-      <FromSend />
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainIndex />} />
+          <Route path="/risk" element={<Risk />} />
+          <Route path="/M" element={<MainIndexT />} />
+          <Route path="/N" element={<MainIndexN />} />
+          <Route path="/D" element={<MainIndexF />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
